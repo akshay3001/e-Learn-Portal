@@ -8,7 +8,7 @@ Prerequisites:
 
 Setting up project for the first time--
 
-1. Download entire project from here-- GITHUB link.
+1. Download entire project from here-- https://github.com/akshay3001/e-Learn-Portal
 2. After downloading extract zip anywhere.
 3. Open the extracted zip and run cmd there.(on the extracted folder location).
 4. Run--a) npm install
