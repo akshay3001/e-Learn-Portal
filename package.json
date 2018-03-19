@@ -1,0 +1,38 @@
+{
+  "name": "elearn-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "jsonwebtoken": "^7.3.0",
+    "ent": "^2.2.0",
+    "moment-timezone": "^0.5.11",
+    "openpgp": "^2.3.6",
+    "socket.io": "^1.7.2",
+    "mailgun": "^0.5.0",
+    "mailgun-js": "^0.8.2",
+    "ent": "^2.2.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.0.5",
+    "multer":"*",
+    "path":"*",
+    "ejs": "^2.5.6",
+    "mongoose-unique-validator": "^1.0.4"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-env": "^0.2.0",
+    "gulp-mocha": "^2.1.1",
+    "gulp-nodemon": "^2.0.3",
+    "sinon": "^1.15.1",
+    "supertest": "^1.0.1"
+  }
+}

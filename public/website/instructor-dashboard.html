@@ -1,0 +1,48 @@
+<!-- Wrapper required for sidebar transitions -->
+<div class="st-container padding-none">
+  <div class="st-pusher" id="content">
+    <div class="st-content">
+
+      <!-- extra div for emulating position:fixed of the menu -->
+      <div class="st-content-inner padding-none">
+
+        <div class="container-fluid">
+
+          <div class="page-section">
+            <h1 class="text-display-1">Dashboard</h1>
+          </div>
+
+          <div class="row" data-toggle="isotope">
+            <div class="item col-xs-12 col-lg-12">
+              <div class="panel panel-default paper-shadow" data-z="0.5">
+                <div class="panel-heading">
+                  <h4 class="text-headline margin-none">My Courses</h4>
+                  <p class="text-subhead text-light">Your recent courses</p>
+                </div>
+                <ul class="list-group">
+                  <li class="list-group-item media v-middle" ng-repeat="course in courses">
+                    <div ng-click="courseDetailPage(course);" class="media-body">
+                      <a class="text-subhead list-group-link">{{course.title}}</a>                  
+                    </div>
+                  </li>
+                  
+                </ul>
+                <div class="panel-footer text-right">
+                  <a ui-sref="app-instructor.addCourse" class="btn btn-primary paper-shadow relative" data-z="0" data-hover-z="1" data-animated>CREATE COURSE <i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /st-content-inner -->
+
+    </div>
+    <!-- /st-content -->
+
+  </div>
+  <!-- /st-pusher -->
+</div>
+<!-- /st-container -->

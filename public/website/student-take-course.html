@@ -1,0 +1,92 @@
+
+
+<div class="parallax bg-white page-section third">
+  <div class="container parallax-layer" data-opacity="true">
+    <div class="media v-middle media-overflow-visible">
+      <div class="media-left">
+        <span class="icon-block s30 bg-lightred"><i class="fa fa-github"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="page-section">
+    <div class="row" style="float: left">
+
+      <div class="col-md-9">
+
+        <div class="page-section" ng-class="{ 'padding-top-none': $state.includes('website-student') }">
+          <div class="media media-grid v-middle">
+          
+            <div class="media-body">
+              <h1 class="text-display-1 margin-none">{{course.title}}</h1>
+            </div>
+          </div>
+          <br/>
+          <p class="text-body-2">{{course.description}}</p>
+        </div>
+
+        <h5 class="text-subhead-2 text-light">Curriculum</h5>
+
+       <video id="customPlyr" poster="/path/to/poster.jpg" controls>
+          <source src="" type="video/mp4">
+        </video>
+
+        <div id="plyr" data-type="youtube" data-video-id="">
+            
+        </div>
+
+        <div class="panel panel-default curriculum open paper-shadow" ng-repeat="lesson in lessons" data-z="0.5">
+          <div class="panel-heading panel-heading-gray" data-toggle="collapse" data-target="#curriculum-1">
+            <div class="media">
+              <div class="media-left">
+                <span class="icon-block img-circle bg-indigo-300 half text-white"><i class="fa fa-graduation-cap"></i></span>
+              </div>
+              <div class="media-body">
+              {{videoid}}
+                <h4 class="text-headline" ng-click="playvideo(lesson.coursepath)">Lesson</h4>
+                <p>duration:{{lesson.duration}} | created:{{lesson.created | date:'dd/MM/yyyy'}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="list-group collapse in" id="curriculum-1">
+          </div>
+        </div>
+
+        <br/>
+        <br/>
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">Instructor</h4>
+          </div>
+          <div class="panel-body">
+            <div class="media v-middle">
+              <div class="media-left">
+                <img src="images/people/110/guy-6.jpg" alt="About Adrian" width="60" class="img-circle" />
+              </div>
+              <div class="media-body hide">
+                <h4 class="text-title margin-none"><a href="#">Adrian Demian</a></h4>
+                <span class="caption text-light">Biography</span>
+              </div>
+            </div>
+            <br/>
+            <div class="expandable expandable-indicator-white expandable-trigger">
+              <div class="expandable-content">
+                <p>Error in getuser profile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

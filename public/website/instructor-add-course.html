@@ -1,0 +1,140 @@
+  <div class="st-container padding-none">
+    <div class="st-pusher" id="content">
+
+      <!-- sidebar effects INSIDE of st-pusher: -->
+      <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+      <!-- this is the wrapper for the content -->
+      <div class="st-content">
+
+        <!-- extra div for emulating position:fixed of the menu -->
+        <div class="st-content-inner padding-none">
+
+          <div class="container-fluid">
+
+            <div class="page-section">
+              <h1 class="text-display-1">Create New Course</h1>
+            </div>
+
+            <!-- Tabbable Widget -->
+            <div class="tabbable paper-shadow relative" data-z="0.5">
+              <!-- Tabs -->
+              <ul class="nav nav-tabs" ng-init="panel='course'">
+                <li ng-click="panel='course'" ng-class="panel=='course'?'active':''"><a><i class="fa fa-fw fa-lock"></i> <span class="hidden-sm hidden-xs">Course</span></a></li> 
+                <li ng-click="panel='lesson'; addlessonTab();" ng-class="panel=='lesson'?'active':''"><a><i class="fa fa-fw fa-credit-card"></i> <span class="hidden-sm hidden-xs">Lessons</span></a></li>
+              </ul>
+              <!-- // END Tabs -->
+
+              <!-- Panes -->
+              <div class="tab-content">
+
+                <div id="course" class="tab-pane active" ng-show="panel=='course'">
+                  <form action="">
+                    <div class="form-group form-control-material">
+                      <input type="text" name="title" id="title" placeholder="Course Title" class="form-control used" value="Basics of HTML" ng-model="course.title"/>
+                      <label for="title">Title</label>
+                    </div>
+                    <div class="form-group form-control-material">
+                      <select id="select" class="form-control ">
+                        <option value=""></option>
+                        <option value="0">HTML</option>
+                        <option value="1">Angular JS</option>
+                        <option value="2">CSS / LESS</option>
+                        <option value="3">Design / Concept</option>
+                      </select>                    
+                      <label for="title">Category</label>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="description">Description</label>
+                      <textarea name="description" id="description" cols="30" rows="10" class="summernote" ng-model="course.description"></textarea>
+                    </div>
+                    <div class="form-group form-control-material">
+                      <input type="text" name="courseDuration" id="title" placeholder="Course Duration" class="form-control used" ng-model="course.duration"/>
+                      <label for="title">Course Duration</label>
+                    </div>
+
+                    <div class="form-group form-control-material">
+                      <select id="select" ng-options="x for x in Prnames" ng-model="course.price" class="form-control">
+                        <option value=""></option>
+                      </select>                    
+                      <label for="title">Price</label>
+                    </div>
+                  </form>
+                  <div class="text-right">
+                    <a href="" ng-click="submit()" class="btn btn-primary">Save</a>
+                  </div>
+                </div>
+
+                <div id="lessons" class="tab-pane active" ng-show="panel=='lesson'">
+                  <div class="media v-middle s-container">
+                    <div class="media-body">
+                      <h5 class="text-subhead text-light">3 Lessons</h5>
+                    </div>
+                    <div class="media-right">
+                      <a class="btn btn-primary paper-shadow relative" href="" ng-click="addLesson()">Add lesson</a>
+                    </div>
+                  </div>
+                  <div class="nestable" id="nestable-handles-primary">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <form>
+                          <div class="row">
+                            <div class="col-md-10">
+                              <div class="form-group form-control-material">
+                                <input type="text" ng-model="lesson.title" class="form-control" id="exampleInputFirstName" placeholder="Lesson Title">
+                                <label for="exampleInputFirstName">Course Title</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group form-control-material static col-md-6">
+                            <input type="text" id="exampleInputEmail1" class="form-control" ng-model="lesson.coursepath" placeholder="course path">
+                            <label for="exampleInputEmail1">Course Path</label>
+                          </div>
+                          <div class="form-group form-control-material static col-md-6">
+                            <input type="text" ng-model="lesson.duration" class="form-control" placeholder="duration">
+                            <label>Duration</label>
+                          </div>
+                          <button type="submit" ng-click="addLesson()" class="btn btn-primary">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <ul class="nestable-list">
+                      <li class="nestable-item nestable-item-handle" data-id="2" ng-repeat="lesson in lessons">
+                        <div class="nestable-handle"><i class="md md-menu"></i></div>
+                        <div class="nestable-content">
+                          <div class="media v-middle">
+                            <div class="media-left">
+                              <div class="icon-block half bg-purple-400 text-white">
+                                <i class="fa"></i>
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h4 class="text-title media-heading margin-none">
+                                <a href="" class="link-text-color">{{lesson.title}}</a>
+                              </h4>
+                              <div class="text-caption">{{lesson.created | date:'dd/mm/yyyy'}} duration : {{lesson.duration}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+              <!-- // END Panes -->
+            </div>
+            <!-- // END Tabbable Widget -->
+          </div>
+
+        </div>
+        <!-- /st-content-inner -->
+
+      </div>
+      <!-- /st-content -->
+
+    </div>
+  </div>

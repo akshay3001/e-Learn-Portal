@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login to Chat</title>
+  <script src="/chat/script_login.js"></script>
+  <link rel="stylesheet" href="/chat/style_login.css">
+  <link href="/chat/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body onload="load()">
+  <p>Chose your nickname (or login)</p>
+  <section id="login_form">
+    <label for="nickname">nickname</label><input id="nickname" type="text" onkeydown="pressKey(event)" oninput="input(event)" autofocus><br>
+	<label id="use_pass" class="link" onmouseover="explain('exp_pass')" onmouseleave="hideExplain('exp_pass')" onclick="showPassword()">I have a password.</label>
+    <label for="password" class="password" hidden>password</label><input id="password" class="password" type="password" onkeydown="pressKey(event)" hidden><br>
+	<label class="link" onmouseover="explain('exp_advanced')" onmouseleave="hideExplain('exp_advanced')"><input type="checkbox" id="advanced" value="checkbox1">Use advanced features.</label><br>
+    <button id="login_btn" onclick="login()" disabled>Go to chat</button>
+  </section>
+  <section id="explainations">
+    <p id="exp_pass" hidden>Click here if you have an account on nodechat.</p>
+    <p id="exp_advanced" hidden>Advanced features include key generation, encrypted messages, and server commands.</p>
+  </section>
+  <section id="errors">
+    <p id="login_err"></p>
+  </section>
+</body>
+</html>

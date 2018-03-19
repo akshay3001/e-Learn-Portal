@@ -1,0 +1,17 @@
+#explainations {
+	color: #00008B
+}
+
+#errors {
+	color: red
+}
+
+.link {
+	color: darkblue
+}
+
+.link:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: blue
+}

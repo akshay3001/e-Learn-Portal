@@ -1,0 +1,70 @@
+<!-- Wrapper required for sidebar transitions -->
+<div class="st-container padding-none">
+  <div class="st-pusher" id="content">
+    <div class="st-content">
+
+      <!-- extra div for emulating position:fixed of the menu -->
+      <div class="st-content-inner padding-none">
+
+        <div class="container-fluid">
+
+          <div class="page-section">
+            <h1 class="text-display-1">Dashboard</h1>
+          </div>
+
+          <div class="row" data-toggle="isotope">
+            <div class="item col-xs-12 col-lg-12">
+              <div class="panel panel-default paper-shadow" data-z="0.5">
+                <div class="panel-heading">
+                  <h4 class="text-headline margin-none">All Users</h4>
+                </div>
+
+                 <div class="table-responsive">
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>Create Date</th>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Email</th>
+                  <th>Location</th>
+                  <th class="text-right">Act/Deactive</th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr ng-repeat="user in Users">
+                  
+                  <td><span class="label label-default">{{user.created  | date:"dd/MM/yyyy"}}</span></td>
+                  <td>
+                    <img ng-src="{{user.proImg || blankPhoto}}" width="40" class="img-circle"> {{user.userName}}
+                  </td>
+                  <td><span class="label label-default">{{user.admin}}</span></td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.address}}</td>
+                  
+                  <td class="text-right">
+                    <a href="" class="btn btn-default btn-xs hide" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a href="" class="btn btn-danger btn-xs hide" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-times"></i></a>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+              
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /st-content-inner -->
+
+    </div>
+    <!-- /st-content -->
+
+  </div>
+  <!-- /st-pusher -->
+</div>
+<!-- /st-container -->

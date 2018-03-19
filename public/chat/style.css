@@ -1,0 +1,65 @@
+aside {
+	float: right
+}
+
+.toself {
+	color: gray
+}
+
+.from_server {
+	color: #00008B
+}
+
+.link {
+	color: darkblue
+}
+
+.link:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: blue
+}
+
+#help {
+	float: none;
+	color: darkblue;
+}
+
+#help h3:hover {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#connected {
+	color: green
+}
+
+#connected li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#dest:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#chat_zone strong {
+	color: white;
+	background-color: black;
+	padding: 2px;
+}
+
+#key {
+	height: 50px;
+	width: 50px
+}
+
+#wait_please {
+	color: #00008B
+}
+
+#gen_error {
+	color: red;
+}

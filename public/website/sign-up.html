@@ -1,0 +1,88 @@
+<div id="content">
+  <div class="container-fluid">
+
+    <div class="lock-container">
+      <div class="panel panel-default text-center paper-shadow" data-z="0.5">
+        <h1 class="text-display-1">{{"Createaccount"| translate}}</h1>
+        <div class="panel-body">
+          <!-- Signup -->
+          <form name="registration" novalidate="" ng-submit="submit()">
+                <div class="form-group">
+                    <div class="form-control-material ">
+                        <select class="form-control" name="role" ng-model="user.admin" required ng-options="role for role in roles">
+                        </select>
+                        <label for="firstName ">{{"RegisterRole"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.role.$invalid &amp;&amp; (registration.role.$dirty || registration.$submitted)">{{"PleaseenteryourUserName"|translate}}</div>
+                    </div>
+                </div>                
+                <div class="form-group ">
+                    <div class="form-control-material ">
+                        <input id="firstName" name="firstName" type="text" ng-model="user.firstName" required class="form-control " placeholder="{{'Firstname'|translate}}">
+                        <label for="firstName">{{"Firstname"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.firstName.$invalid &amp;&amp; (registration.firstName.$dirty || registration.$submitted)">{{"PleaseenteryourFirstName"|translate}}</div>
+                    </div>
+
+                </div>
+                <div class="form-group ">
+                    <div class="form-control-material ">
+                        <input id="lastName" name="lastName" type="text" ng-model="user.lastName" required class="form-control " placeholder="{{'lastname'|translate}}">
+                        <label for="lastName ">{{"lastname"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.lastName.$invalid &amp;&amp; (registration.lastName.$dirty || registration.$submitted)">{{"PleaseenteryourLastName"|translate}}</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="form-control-material">
+                        <input id="email1" type="text"  ng-model="user.email" class="form-control" required name="emailaddress" placeholder="{{'Emailaddress'|translate}}">
+                        <label for="email">{{"Emailaddress"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.emailaddress.$invalid &amp;&amp; (registration.emailaddress.$dirty || registration.$submitted)">{{"PleaseenteryourEmailaddress"|translate}}</div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="form-control-material">
+                        <input id="address" name="address" type="address" ng-model="user.address" required class="form-control " placeholder="{{'Address'|translate}}">
+                        <label for="email ">{{"Address"|translate}}</label>
+
+
+                        <div class="errormsg" ng-show="registration.address.$invalid &amp;&amp; (registration.address.$dirty || registration.$submitted)">{{"PleaseenteryourAddress"|translate}}</div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="form-control-material ">
+                        <input id="UserName" required type="UserName" name="UserName" class="form-control" ng-model="user.userName" placeholder="{{'Username'|translate}}">
+                        <label for="UserName ">{{"Username"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.UserName.$invalid &amp;&amp; (registration.UserName.$dirty || registration.$submitted)">{{"PleaseenteryourUserName"|translate}}</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="form-control-material ">
+                        <input id="password" name="password" ng-model="user.password" type="password" required class="form-control " placeholder="{{'Password'|translate}} ">
+                        <label for="password">{{"Password"|translate}}</label>
+
+                        <div class="errormsg" ng-show="registration.password.$invalid &amp;&amp; (registration.password.$dirty || registration.$submitted)">{{"PleaseenteryourPassword"|translate}}</div>
+                    </div>
+                </div>                
+                <div class="text-center ">
+                    <button type="submit" class="btn btn-primary">{{"Createaccount" |translate}}</button>
+                </div>
+			</form>
+			<!-- //Signup -->
+
+		</div>
+	</div>
+</div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer ">
+    <strong>Learning &copy; 2017</strong>
+</footer>
+<!-- // Footer -->
